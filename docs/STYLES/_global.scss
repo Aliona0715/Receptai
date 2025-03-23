@@ -1,0 +1,74 @@
+// _global.scss (Globalūs stiliai)
+
+body {
+    background-color: #fffaf0;
+    background-image: url("../IMG/bg/coffee.jpg");
+    background-repeat: repeat;
+    background-size: 120px; // gali keisti pagal norimą smulkumą
+    font-family: $font-main;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+  
+    // Švelnus „nublukinantis“ sluoksnis
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.7);
+
+      z-index: -1;
+    }
+  }  
+
+button {
+    background: $primary-color;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: $shadow;
+
+    &:hover {
+        background: darken($primary-color, 10%);
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+body.breakfast-page {
+    background: linear-gradient(to bottom right, #fff9f0, #ffe7d6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $font-main;
+    min-height: 100vh;
+    padding: 2rem;
+  
+    h1 {
+      text-align: center;
+      color: #d84315;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  
+    a {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #d84315;
+      font-weight: bold;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  

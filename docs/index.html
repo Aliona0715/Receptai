@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receptų pasaulis</title>
+
+  <link rel="stylesheet" href="STYLES/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Receptų pasaulis</h1>
+    <div id="user-container">
+      <div id="user-status">
+        <img src="IMG/user.png" alt="Vartotojas" class="user-icon" />      
+      <button id="logout-btn">Atsijungti</button>
+    </div>
+  </header>
+
+  <!-- Prisijungimo forma -->
+  <div id="login-modal" class="auth-modal">
+    <div class="auth-content">
+      <h2>Prisijungimas</h2>
+      <input type="email" id="email" placeholder="El. paštas" />
+      <input type="password" id="password" placeholder="Slaptažodis" />
+      <button id="toggle-password" type="button">👁️ Rodyti</button>
+      <button id="submit-login">Prisijungti</button>
+      <p id="login-error" style="color: red; display: none;">Įveskite teisingą el. paštą ir slaptažodį (min. 6 simboliai).</p>
+    </div>
+  </div>
+
+  <!-- Navigacija -->
+  <nav>
+    <ul class="category-nav">
+      <li><a href="pusryciai.html"><i class="fas fa-coffee"></i><span>Pusryčiai</span></a></li>
+      <li><a href="pietus.html"><i class="fas fa-utensils"></i><span>Pietūs</span></a></li>
+      <li><a href="vakariene.html"><i class="fas fa-drumstick-bite"></i><span>Vakarienė</span></a></li>
+      <li><a href="desertai.html"><i class="fas fa-ice-cream"></i><span>Desertai</span></a></li>
+      <li><a href="uzkandziai.html"><i class="fas fa-carrot"></i><span>Užkandžiai</span></a></li>
+    </ul>
+  </nav>
+  
+  <script src="JS/script.js"></script>
+</body>
+</html>

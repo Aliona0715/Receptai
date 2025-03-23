@@ -1,0 +1,112 @@
+
+          <!DOCTYPE html>
+          <html lang="lt">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Užkandžiai</title>
+            <link rel="stylesheet" href="/STYLES/styles.css" />
+          </head>
+          
+          <body class="snacks-page">
+            <header>
+              <h1>Užkandžiai</h1>
+              <a href="index.html">Grįžti į pagrindinį puslapį</a>
+            </header>
+          
+            <main class="recipe-list">
+          
+              <div class="recipe-card">
+                <h3>Keptos morkos</h3>
+                <img src="IMG/Užkandžiai/keptos_morkos.jpg" alt="Keptos morkos">
+                <p class="shortdesc">Šiltas, saldus ir maistingas užkandis.</p>
+                <button class="toggle-btn">Daugiau</button>
+                <div class="full-recipe hidden">
+                  <h4>Paruošimas:</h4>
+                  <ol>
+                    <li>Supjaustykite morkas juostelėmis.</li>
+                    <li>Apšlakstykite alyvuogių aliejumi, pabarstykite prieskoniais.</li>
+                    <li>Kepkite 200°C orkaitėje ~25 min.</li>
+                  </ol>
+                </div>
+              </div>
+          
+              <div class="recipe-card">
+                <h3>Pjaustytos daržovės</h3>
+                <img src="IMG/Užkandžiai/pjaustytos_darzoves.jpg" alt="Pjaustytos daržovės">
+                <p class="short-desc">Traškūs, spalvoti ir greiti vitaminai!</p>
+                <button class="toggle-btn">Daugiau</button>
+                <div class="full-recipe hidden">
+                  <h4>Paruošimas:</h4>
+                  <ol>
+                    <li>Supjaustykite agurkus, paprikas, morkas.</li>
+                    <li>Patiekite su humusu ar jogurtiniu padažu.</li>
+                  </ol>
+                </div>
+              </div>
+          
+              <div class="recipe-card">
+                <h3>Sumuštiniai su pomidoru ir mocarela</h3>
+                <img src="IMG/Užkandžiai/sumustiniai_pomidoras_mocarela.jpg" alt="Sumuštiniai su pomidoru ir mocarela">
+                <p class="short-desc">Skonio klasika iš Italijos – greitai ir skaniai.</p>
+                <button class="toggle-btn">Daugiau</button>
+                <div class="full-recipe hidden">
+          <h4>Paruošimas:</h4>
+          <ol>
+            <li>Ant trapučių užtepkite sūrelio ar avokado kremo.</li>
+            <li>Uždėkite lašišos juostelę, papuoškite krapais.</li>
+          </ol>
+        </div>
+      </div>
+    
+      <div class="recipe-card">
+        <h3>Trapučiai su riešutų sviestu ir bananais</h3>
+        <img src="IMG/Užkandžiai/trapuciai_riesutu_bananas.jpg" alt="Trapučiai su riešutų sviestu ir bananais">
+        <p class="short-desc">Saldu, maistinga ir užteks tik trijų ingredientų.</p>
+        <button class="toggle-btn">Daugiau</button>
+        <div class="full-recipe hidden">
+          <h4>Paruošimas:</h4>
+          <ol>
+            <li>Užtepkite riešutų sviesto ant trapučio.</li>
+            <li>Uždėkite banano griežinėlius, pabarstykite cinamonu.</li>
+          </ol>
+        </div>
+      </div>
+    
+      <div class="recipe-card">
+        <h3>Trapučiai su riešutų sviestu ir braškėmis</h3>
+        <img src="IMG/Užkandžiai/trapuciai_riesutu_braskes.jpg" alt="Trapučiai su riešutų sviestu ir braškėmis">
+        <p class="short-desc">Trašku, gaivu, šiek tiek saldu – vasaros skonis.</p>
+        <button class="toggle-btn">Daugiau</button>
+        <div class="full-recipe hidden">
+          <h4>Paruošimas:</h4>
+          <ol>
+            <li>Ant trapučių užtepkite riešutų sviesto.</li>
+            <li>Uždėkite braškių griežinėlius, galima pabarstyti chia sėklomis.</li>
+          </ol>
+        </div>
+      </div>
+    
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".toggle-btn");
+  
+        buttons.forEach(button => {
+          button.addEventListener("click", () => {
+            const fullRecipe = button.nextElementSibling;
+            fullRecipe.classList.toggle("hidden");
+  
+            // Pakeičiam mygtuko tekstą
+            if (fullRecipe.classList.contains("hidden")) {
+              button.textContent = "Daugiau";
+            } else {
+              button.textContent = "Mažiau";
+            }
+          });
+        });
+      });
+    </script>
+  
+</body>
+</html>

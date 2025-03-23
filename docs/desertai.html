@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desertai</title>
+  <link rel="stylesheet" href="/STYLES/styles.css" />
+</head>
+
+<body class="desserts-page">
+  <header>
+    <h1>Desertai</h1>
+    <a href="index.html">Grįžti į pagrindinį puslapį</a>
+  </header>
+
+  <main class="recipe-list">
+
+    <div class="recipe-card">
+      <h3>Varškės apkepas</h3>
+      <img src="IMG/Desertai/varske_apkepas.jpg" alt="Varškės apkepas">
+      <p class="short-desc">Šiltas, purus desertas su švelniu skoniu.</p>
+      <button class="toggle-btn">Daugiau</button>
+      <div class="full-recipe hidden">
+        <h4>Paruošimas:</h4>
+        <ol>
+          <li>Sumaišykite varškę, kiaušinius, manų kruopas, šiek tiek cukraus.</li>
+          <li>Supilkite į kepimo formą.</li>
+          <li>Kepkite 180°C orkaitėje ~40 min.</li>
+        </ol>
+      </div>
+    </div>
+      <div class="recipe-card">
+        <h3>Desertinė varškė</h3>
+        <img src="IMG/Desertai/desertine_varske.jpg" alt="Desertinė varškė">
+        <p class="short-desc">Gaivus ir paprastas desertas be kepimo.</p>
+        <button class="toggle-btn">Daugiau</button>
+        <div class="full-recipe hidden">
+          <h4>Paruošimas:</h4>
+          <ol>
+            <li>Varškę sumaišykite su trintomis uogomis ar jogurtu.</li>
+            <li>Patiekite atšaldytą, apibarstykite riešutais.</li>
+          </ol>
+        </div>
+      </div>
+    
+      <div class="recipe-card">
+        <h3>Džiovinti obuoliai</h3>
+        <img src="IMG/Desertai/dziovinti_obuoliai.jpg" alt="Džiovinti obuoliai">
+        <p class="short-desc">Natūralus, traškus ir saldus užkandis.</p>
+        <button class="toggle-btn">Daugiau</button>
+        <div class="full-recipe hidden">
+          <h4>Paruošimas:</h4>
+          <ol>
+            <li>Obuolius supjaustykite plonais griežinėliais.</li>
+            <li>Džiovinkite orkaitėje 80–100°C apie 2–3 val.</li>
+          </ol>
+        </div>
+      </div>
+    
+      <div class="recipe-card">
+        <h3>Sluoksniuotas vaisių ir varškės desertas</h3>
+        <img src="IMG/Desertai/sluoksniuotas_varske_vaisiai.jpg" alt="Sluoksniuotas vaisių ir varškės desertas">
+        <p class="short-desc">Spalvotas, gaivus ir sotus – kaip stiklinėje tortas!</p>
+        <button class="toggle-btn">Daugiau</button>
+        <div class="full-recipe hidden">
+          <h4>Paruošimas:</h4>
+          <ol>
+            <li>Sluoksniuokite varškę, vaisius, granolą ar sausainius.</li>
+            <li>Galima patiekti iškart arba atšaldyti.</li>
+          </ol>
+        </div>
+      </div>
+    
+      <div class="recipe-card">
+        <h3>Sluoksniuota želė</h3>
+        <img src="IMG/Desertai/sluoksniuota_zele.jpg" alt="Sluoksniuota želė">
+        <p class="short-desc">Spalvinga, žaisminga ir nostalgiška vaikystės klasika.</p>
+        <button class="toggle-btn">Daugiau</button>
+        <div class="full-recipe hidden">
+          <h4>Paruošimas:</h4>
+          <ol>
+            <li>Pasiruoškite skirtingas želė rūšis atskirai.</li>
+            <li>Sluoksniuokite jas stiklinėse, kiekvieną šaldydami.</li>
+          </ol>
+        </div>
+      </div>
+    
+      <div class="recipe-card">
+        <h3>Varškė su trintomis braškėmis</h3>
+        <img src="IMG/Desertai/varske_braskes.jpg" alt="Varškė su trintomis braškėmis">
+        <p class="short-desc">Vasariška klasika – švelnu, saldu ir maistinga.</p>
+        <button class="toggle-btn">Daugiau</button>
+        <div class="full-recipe hidden">
+          <h4>Paruošimas:</h4>
+          <ol>
+            <li>Trinkite braškes su trupučiu cukraus ar medaus.</li>
+            <li>Užpilkite ant varškės ir išmaišykite.</li>
+          </ol>
+        </div>
+      </div>
+    
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".toggle-btn");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const fullRecipe = button.nextElementSibling;
+          fullRecipe.classList.toggle("hidden");
+
+          // Pakeičiam mygtuko tekstą
+          if (fullRecipe.classList.contains("hidden")) {
+            button.textContent = "Daugiau";
+          } else {
+            button.textContent = "Mažiau";
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
